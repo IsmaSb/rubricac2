@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body onload="calculadora();">
+  <nav class="navbar bg">
+    <div class="container-fluid">
+        <a class="navbar-brand bg">
+            <img src="logocuc.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+            <b>Calculadora básica</b>
+        </a>
+    </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-4">
+          <div class="card border-dark m-5 bg3" style="width: 12cm;">
+              <div class="card-header bg"><b>Calculadora</b></div>
+              <div class="card-body">
+                      <div class="card-body">
+
+                        <table class="calculadora">
+                          <tr>
+                            <td colspan="4"><span id="resultado"></span></td>
+                          </tr>
+                          <tr>
+                            <td><button id="reset">AC</button></td>
+                          </tr>
+                          <tr>
+                            <td><button id="siete">7</button></td>
+                            <td><button id="ocho">8</button></td>
+                            <td><button id="nueve">9</button></td>
+                            <td><button id="division">/</button></td>
+                          </tr>
+                          <tr>
+                            <td><button id="cuatro">4</button></td>
+                            <td><button id="cinco">5</button></td>
+                            <td><button id="seis">6</button></td>
+                            <td><button id="multiplicacion">*</button></td>
+                          </tr>
+                          <tr>
+                            <td><button id="uno">1</button></td>
+                            <td><button id="dos">2</button></td>
+                            <td><button id="tres">3</button></td>
+                            <td><button id="resta">-</button></td>
+                          </tr>
+                          <tr>
+                            <td><button id="cero">0</button></td>
+                            <td><button id="punto">.</button></td>
+                            <td><button id="igual">=</button></td>
+                            <td><button id="suma">+</button></td>
+                          </tr>
+                        </table>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+<div class="col-md-2">
+  <table class="table border-dark bg table-fluid mt-5">
+      <thead>
+          <th>Historial</th>
+      </thead>
+      <tbody id="history" class="lp"></tbody>
+  </table>
+
+<button class="btn btn-outline-dark bg mt-2" onclick="clearTable()"><b>Limpiar</b></button>
+</div>
+
+<script src="comandos.js"></script>
+</body>
+</html>
